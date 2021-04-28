@@ -382,7 +382,7 @@ public class DrugManufactureWorkArea extends javax.swing.JPanel {
                 row[2] = ((DrugManufactureRequest) wr).getQuantity();
                 row[3] = ((DrugManufactureRequest) wr).getStatus();
                 row[4] = ((DrugManufactureRequest) wr).getMessage();
-
+                System.out.println(((DrugManufactureRequest) wr).getMessage());
                 model.addRow(row);
 
             }

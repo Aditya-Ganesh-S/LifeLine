@@ -37,6 +37,7 @@ public class PlaceOrderJPanel extends javax.swing.JPanel {
     EcoSystem ecosystem;
     Network network;
     HashMap<String, Integer> drugList;
+    
 
     PlaceOrderJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise, EcoSystem ecosystem, Network network, HashMap<String, Integer> drugList) {
         initComponents();
@@ -330,6 +331,8 @@ public class PlaceOrderJPanel extends javax.swing.JPanel {
         Enterprise en = (Enterprise) ComboBoxEnterprise.getSelectedItem();
         if (en != null) {
             populateMedicines(en);
+//            jLabel8.setVisible(false);
+//            msgTxtField1.setVisible(false);
         }
 
     }//GEN-LAST:event_ComboBoxEnterpriseActionPerformed
@@ -348,6 +351,7 @@ public class PlaceOrderJPanel extends javax.swing.JPanel {
         drugManufactureReq.setQuantity(quantity);
         drugManufactureReq.setStatus("Approval Pending");
         drugManufactureReq.setMessage(msgTxtField1.getText());
+        System.out.println(msgTxtField1.getText());
 
         if (this.enterprise.getWorkQueue() == null) {
             this.enterprise.setWorkQueue(new WorkQueue());
